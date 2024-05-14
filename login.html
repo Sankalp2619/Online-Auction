@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        .input{
+            background-color:rgb(40, 38, 38);
+            margin:20px;
+            padding:20px;
+            justify-content:center;
+            border: 1px solid rgb(15, 14, 15);
+            border-radius : 40px;
+            margin: auto;
+            margin-top:80px;
+            width: fit-content;
+            align-content: center;
+        }
+        body{
+            background-color:rgb(203, 236, 247);
+            
+            
+        }
+        .input1{
+            Border: 2px solid rgb(0, 0, 0);
+            background-color:rgb(11, 26, 94);
+            border-radius: 20px;
+            margin: 10px;
+            width : fit-content;
+            padding: 10px;
+            background-color:rgb(211, 213, 244);
+        }
+        h3{
+            Border:2px solid rgb(249, 8, 157);
+            border-radius: 20px;
+            background-color:rgb(249, 208, 241);
+            margin: 10px;
+            width: fit-content;
+            padding: 10px;
+            text-align: center;
+            position:relative;
+            left: 57px;
+        }
+        body{
+        background-image: url("loginwallpaper1.jpg");
+        background-size: cover;
+        }  
+        #btn{
+        border: 2px solid rgb(7, 2, 138);
+        border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="input">
+        <h3><strong>Enter your login Details</strong></h3>
+        <form action="backend.php">
+            <div class="input1">Enter your name <input type="text" placeholder="Enter your name"></div>
+            <div class="input1">Enter your email id <input type="text" placeholder="Enter your email id "></div>
+            <div class="input1">Enter your password <input type="password" placeholder="Enter your password"></div>
+            <div class="input1">Enter your D.O.B <input type="date" placeholder="Enter your password"></div>
+            <div class="input1">Gender: Male<input type="radio" name="gender"> Female<input type="radio" name="gender"> Other<input type="radio" name="gender"></div>
+            <div class="input1" id="btn"><button>Submit Now</button></div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Auction Website</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(225, 225, 245);
+        }
+        .search {
+            float: left;
+            padding-right: 55px;
+            padding-top: 5px;
+        }
+
+        .btn {
+            background-color: blue;
+            border: 1px solid rgb(147, 146, 146);
+            border-radius: 15px;
+            color: rgb(255, 255, 255);
+            padding: 5px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            border: 1px solid rgb(255, 255, 255);
+            background-color: rgb(2, 2, 192);
+            color: rgb(192, 189, 189);
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .icon {
+            border: 2px solid rgb(255, 217, 0);
+            border-radius: 15px;
+            background-color: rgb(255, 234, 0);
+            width: 40px;
+        }
+
+        .tag1 {
+            border: 1px solid black;
+            border-radius: 15px;
+            background-color: darkblue;
+            display: flex;
+            padding: 5px;
+            text-align: center;
+
+        }
+
+        .head {
+            border: 2px solid rgb(254, 254, 254);
+            background-color: rgb(255, 234, 0);
+            margin: 1px;
+
+        }
+
+        a[target] {
+            color: white;
+            text-decoration: none;
+            margin: auto;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: rgb(255, 153, 0);
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 15px;
+        }
+
+        .search {
+            display: flex;
+            background-color: rgb(255, 153, 0);
+            border: 2px solid white;
+            border-radius: 15px;
+            padding: 3px;
+        }
+
+        #Search {
+            border: 2px solid white;
+            border-radius: 15px;
+            padding: 2px;
+        }
+
+        .search:hover {
+            background-color: rgb(255, 183, 88);
+            color: black;
+            border: 2px solid rgb(180, 117, 34);
+        }
+
+        .tag1 a:hover {
+            background-color: rgb(249, 179, 87);
+            color: black;
+            border: 2px solid rgb(154, 100, 29);
+        }
+
+        h3 {
+            color: white;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 15px;
+            padding: 10px;
+            margin: auto;
+            background-color: rgb(190 0 0);
+        }
+
+        h3:hover {
+            color: rgb(196, 195, 195);
+            background-color: red;
+            border: 2px solid rgb(237, 5, 5);
+            cursor: pointer;
+        }
+
+        .icon:hover {
+            border: 2px solid rgb(255, 255, 255);
+            background-color: rgb(255, 174, 0);
+
+        }
+
+        .background {
+            width: 600px;
+        }
+
+        #bg1 {
+            width: 1000px;
+            border: 1px solid white;
+            background-color: none;
+            border-radius: 0px;
+            margin: 7px;
+
+        }
+
+        #bg2 {
+            vertical-align: top;
+            width: 500px;
+            border: 0px;
+            background-color: none;
+            border-radius: 0px;
+        }
+
+        .background {
+            border: 0px;
+            width: 100%;
+            height: 1600px;
+            background-image: url("https://motionarray.imgix.net/preview-241367-KTZaS2Nu4A-high_0001.jpg");
+            background-repeat: no-repeat;
+            margin: 5px;
+            /* display:flex; */
+        }
+
+        #photo {
+            /* height: 300px;
+            width: 400px; */
+            /* background-image:url("homebackground.png"); */
+            position: relative;
+            top: 60px;
+            left: 120px;
+            background-repeat: no-repeat;
+            align-content: center;
+            margin-left: 130px;
+            display: inline-block;
+        }
+
+        h4 {
+            text-align: right;
+            width: 100%;
+            color: white;
+            padding-right: 200px;
+        }
+
+        #signup {
+            border: 1px solid rgba(0, 0, 0, 0.354);
+            background-color: rgba(0, 0, 0, 0.422);
+            border-radius: 6px;
+            width: 79%;
+            height: 525px;
+            text-align: center;
+            position: relative;
+            left: 410px;
+            bottom: 240px;
+            color: rgb(225, 225, 225);
+        }
+
+        h1#sign {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+        }
+
+        #person {
+            position: relative;
+            bottom: 1295px;
+            left: 40px;
+            display: inline-block;
+        }
+
+        #sign2 {
+            text-align: center;
+            font-size: 15px;
+            position: relative;
+            bottom: 14px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #strip{
+            width:124%;
+            height: 120px;
+            position: relative;
+            left: 220px;
+            bottom:380px;
+            box-shadow: 13px 10px 20px #0c5aa4;
+            opacity: 0.8;
+            cursor: pointer;
+        } 
+        #font1{
+            font-size: 40px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight:lighter;
+            position: relative;
+            left: 105px;
+            bottom: -51px;
+            color:rgb(0 0 0 / 90%);
+        }
+        #font2{
+            font-size: 80px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight:bolder;
+            position: relative;
+            left:180px;
+            bottom:85px;
+            color: rgb(0 0 0 / 90%);
+        }
+        #font3{
+            font-family:monospace;
+            color:white;
+            font-size:25px;
+            position: relative;
+            bottom: 100px;
+            left:40px;
+        }
+        #font4{
+            font-weight:lighter;
+            font-size: 20px;
+            position: relative;
+            bottom: 110px;
+            left: 40px;
+        }
+        #font5{
+            font-family: 'Roboto Condensed', sans-serif;
+            position:relative;
+            bottom: 1430px;
+            left:230px;
+            font-size: 30px;
+            color:#1a2d47d3;
+            font-weight: lighter;
+        }
+        #font6a{
+            font-size:24px;
+            position:relative;
+            bottom: 1450px;
+            left:242px;
+            color:rgba(35, 35, 35, 0.717);
+            font-family: 'Quicksand', sans-serif;
+        }
+        #font6b{
+            font-size:19px;
+            position:relative;
+            bottom: 1485px;
+            left:250px;
+            color:rgba(35, 35, 35, 0.861);
+            font-family: 'Quicksand', sans-serif;
+        }
+        #font6c{
+            font-size:19px;
+            position:relative;
+            bottom: 1484px;
+            left:294px;
+            color:rgba(35, 35, 35, 0.861);
+            font-family: 'Quicksand', sans-serif;
+        }
+        .join a{
+            text-decoration: none;;
+            font-size:18px;
+            width: 18%;
+            text-align:center;
+            padding-right:50px;
+            padding-left:50px;
+            padding-top:10px;
+            padding-bottom:10px;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight:bold;
+            position:relative;
+            left: 565px;
+            bottom:1450px;
+            border: 1px solid rgb(0, 0, 0);
+            background-color:rgba(138, 138, 138, 0.489);
+            color:rgb(0, 0, 0);
+            border-radius:10px;
+        }
+        .join a:hover{
+            text-decoration: none;;
+            font-size:18px;
+            width: 18%;
+            text-align:center;
+            padding-right:50px;
+            padding-left:50px;
+            padding-top:10px;
+            padding-bottom:10px;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight:bold;
+            position:relative;
+            left: 565px;
+            bottom:1450px;
+            border: 1px solid rgb(0, 0, 0);
+            background-color:rgb(0, 255, 0);
+            color:white;
+            border-radius:10px;
+        }
+        #font7{
+            font-size:40px;
+            font-family: 'Fjalla One', sans-serif;
+            font-weight: lighter;
+            display:inline-block;
+            box-shadow: 15px 15px 40px rgb(4 4 79 / 57%);
+            width: 89%;
+            position: relative;
+            left: 0px;
+            bottom: 1350px;
+            padding-left: 80px;
+        }
+        #font7img{
+            position: relative;
+            bottom:1670px;
+            left:-90px;
+        }
+        #font7img2{
+            position:relative;
+            bottom:1999px;
+            left:697px;
+            opacity:0.9;
+        }
+        #phone1{
+            position:relative;
+            left: 185px;
+            bottom:2520px;
+        }
+        #phone2{
+            position:relative;
+            bottom: 1650px;
+            display:inline-block;
+            height: 20%;
+        }
+        #box1{
+            border:1px solid rgb(4, 255, 4);
+            /* border-radius:7px; */
+            background-color:rgba(19, 19, 19, 0.644);
+            width:2%;
+            padding:70px;
+            position:relative;
+            bottom:2200.5px;
+            left:290px;
+        }
+        #box2{
+            border:1px solid rgb(4, 255, 4);
+            /* border-radius:5px; */
+            background-color:rgba(19, 19, 19, 0.644);
+            width:9%;
+            padding:70px;
+            position:relative;
+            bottom:2342px;
+            left:455px;
+        }
+        #box3{
+            border:1px solid rgb(4, 255, 4);
+            /* border-radius:5px; */
+            background-color:rgba(19, 19, 19, 0.644);
+            width:9%;
+            padding:70px;
+            position:relative;
+            bottom:2483px;
+            left:707px;
+        }
+        #box4{
+            border:1px solid rgb(4, 255, 4);
+            /* border-radius:7px; */
+            background-color:rgba(19, 19, 19, 0.644);
+            width:9%;
+            padding:70px;
+            position:relative;
+            bottom:2624.5px;
+            left:959px;
+        }
+        #box1f{
+            color:white;
+            font-family: 'Sofia Sans Condensed', sans-serif;
+            font-size:60px;
+            position: relative;
+            bottom: 2810px;
+            left:327px;
+        }
+        #box2fa{
+            color:white;
+            font-size:25px;
+            font-family: 'Sofia Sans Condensed', sans-serif;
+            position:relative;
+            bottom: 2968px;
+            left: 527px;
+            font-weight:bold;
+        }
+        #box2fb{
+            color:white;
+            font-size:25px;
+            font-family: 'Sofia Sans Condensed', sans-serif;
+            position:relative;
+            bottom: 2950px;
+            left: 520px;
+            font-weight:bold;
+        }
+        #box3fa{
+            color: white;
+            font-size:25px;
+            font-family: 'Sofia Sans Condensed', sans-serif;
+            position:relative;
+            bottom: 3030px;
+            left: 790px;
+            font-weight:bold;
+        }
+        #box3fb{
+            color: white;
+            font-size:25px;
+            font-family: 'Sofia Sans Condensed', sans-serif;
+            position:relative;
+            bottom: 3010px;
+            left: 804px;
+            font-weight:bold;
+        }
+        #box4fa{
+            color:white;
+            font-size:25px;
+            font-family: 'Sofia Sans Condensed', sans-serif;
+            position:relative;
+            bottom: 3090px;
+            left: 1030px;
+            font-weight:bold;
+        }
+        #box4fb{
+            color:white;
+            font-size:25px;
+            font-family: 'Sofia Sans Condensed', sans-serif;
+            position:relative;
+            bottom: 3070px;
+            left: 1030px;
+            font-weight:bold;
+        }
+        .img1{
+            position:relative;
+            bottom:3165px;
+            left:475px;
+        }
+        .img2{
+            position:relative;
+            bottom:3170px;
+            left:475px;
+        }
+        .img3{
+            position:relative;
+            bottom:3279px;
+            left:730px;
+        }
+        .img4{
+            position:relative;
+            bottom:3285px;
+            left:730px;
+        }
+        .img5{
+            position:relative;
+            bottom:3394px;
+            left:980px;
+        }
+        .img6{
+            position:relative;
+            bottom:3399px;
+            left:980px;
+        }
+        .auction{
+            font-size: 40px;
+            font-family: 'Abel', sans-serif;
+            font-weight:bold;
+            color:rgba(2, 2, 105, 0.954);
+            position : relative;
+            bottom: 3290px;
+            left: 540px;
+        }
+        #line1{
+            position : relative;
+            bottom:3332px;
+            left:420px;
+        }
+        #line2{
+            position: relative;
+            bottom: 3373.5px; 
+            left: 735px;
+        }
+        #box5a{
+            border:0.05px solid rgba(196, 193, 193, 0.961);
+            border-radius: 0px;
+            background-color: rgba(255, 255, 255, 0);
+            width:30%;
+            padding-top:45px;
+            padding-bottom:45px;
+            position:relative ;
+            left: 45px;
+            bottom: 3300px;
+        }
+        #box5b{
+            border:0.05px solid rgba(196, 193, 193, 0.961);
+            border-radius: 0px;
+            background-color: rgba(255, 255, 255, 0);
+            width:30%;
+            padding-top:245px;
+            padding-bottom:215px;
+            position:relative ;
+            left: 45px;
+            bottom: 3300.5px;
+        }
+        #box5af1{
+            font-size: 25px;
+            font-family: 'Mohave', sans-serif;
+            position:relative;
+            left: 95px;
+            bottom: 3840px;
+        }
+        #box5af2{
+            font-size: 25px;
+            font-family: 'Mohave', sans-serif;
+            position:relative;
+            left: 175px;
+            bottom: 3840px;
+        }
+        .F1:hover{
+            color:orange;
+        }
+        #box5bf1{
+            font-size: 20px;
+            font-family: 'Teko', sans-serif;
+            color: rgba(0, 0, 0, 0.578);
+            position:relative;
+            bottom: 3825px;
+            left: 183px;
+        }
+        #box5bf2{
+            font-size:20px;
+            font-family: 'Abel', sans-serif;
+            font-weight: bold;
+            color:rgb(255, 137, 3);
+            position:relative;
+            bottom: 3695px;
+            left: 85px;
+        }
+        #box5bf3{
+            font-size: 24px;
+            font-family: 'Fjalla One', sans-serif;
+            font-weight:bold;
+            color:rgb(8, 181, 2);
+            position:relative;
+            bottom : 3693px;
+            left : 160px;
+
+        }
+        #box5bi{
+            position:relative;
+            bottom: 3820px;
+            left: 100px;
+        }
+        #box5bii{
+            position:relative;
+            bottom: 3730px;
+            left: 365px;
+        }
+        #box5bbtn1 a{
+            position: relative;
+            bottom: 3879px;
+            left: 270px;
+            border: rgb(206, 204, 204);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #box5bbtn1 a:hover{
+            color: rgb(255, 255, 255);
+            background-color: rgb(255, 98, 0);
+        }
+        #box5bbtn2 {
+            position: relative;
+            bottom: 3899px;
+            left: 190px;
+            font-size: 15px;
+            color:white;
+            border: 1px solid rgb(8, 0, 120);
+            padding: 3px;
+            display:inline;
+            padding-top:8px;
+            padding-bottom:9px;
+            padding-right:14px;
+            padding-left: 14px;
+            background-color: rgba(65, 61, 168, 0.916);
+            border-radius: 5px;
+        }
+        #box5bbtn2:hover{
+            color: rgb(255, 255, 255);
+            background-color: rgb(255, 98, 0);
+            cursor:pointer;
+        }
+        #box5bbtn3 img{
+            border:1px solid darkblue;
+            border-radius:5px;
+            background-color: rgba(64, 61, 168, 0.865); 
+            /* display:inline-block; */
+            padding-top:8px;
+            padding-bottom:7px;
+            padding-right:14px;
+            padding-left: 14px;
+            position: relative;
+            bottom: 3928px;
+            left: 130px;
+        }
+        #box5bbtn3 img:hover{
+            color:white;
+            background-color: purple;
+            cursor:pointer;
+        }
+        #box6{
+            font-size: 25px;
+            font-weight:bold;
+            font-family: 'Sofia Sans Condensed', sans-serif;
+            border:0px;
+            border-radius:1px;
+            background-color: rgba(194, 194, 194, 0.785);
+            color:darkblue;
+            display:inline-block;
+            padding:15px;
+            width:342px;
+            text-align: center;
+            position:relative;
+            bottom: 4075px;
+            left: 46px;
+        }
+        #line3 {
+            position: relative;
+            bottom: 3930px;
+            left:40px;
+        }
+        body{
+            background-color: white;
+        }
+        .sign3{
+            width: 25vw;
+            height: 3vw;
+            margin: 15px;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 7px;
+        }
+        #submit{
+            padding: 7px;
+            margin: 15px;
+            width: 23vw;
+            border: 1px solid black;
+            border-radius: 7px;
+            background-color: rgba(229, 229, 229, 0.237);
+            color:white;
+            padding: 15px;
+        }
+        #submit:hover{
+            padding: 7px;
+            margin: 15px;
+            width: 23vw;
+            border: 1px solid black;
+            border-radius: 7px;
+            background-color: rgba(76, 239, 6, 0.897);
+            color:white;
+            padding: 15px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="Head">
+            <div class="tag1">
+                <img src="hammer.png" alt="404 Not Found" id="webicon" class="icon">
+                <h3>NetBidz</h3>
+                <a href="s1.html" target="_blank">Home</a>
+                <a href="https://google.com" target="_blank">About</a>
+                <a href="https://instagram.com" target="_blank">Services</a>
+                <a href="https://calllogs.com" target="_blank">Contact us</a>
+                <div class="search">
+                    <img src="searchicon.png" alt="Not found" class="icon">
+                    <input type="text" placeholder="Search here" id="Search">
+                </div>
+                <a href="loginnew.html" target="_blank">Login</a>
+            </div>
+        </div>
+    </header>
+        <div class="background">
+            <div id="photo">
+                <img src="homebackground.png" alt="" width="400px">
+            <div id="signup">
+                <h1 id="sign"><strong>FREE SIGN UP</strong></h1>
+                <h4 id="sign2">Sign-up takes less than 30 seconds. Get 5 Free Credits on Joining.</h4>
+                <input type="text" placeholder="Enter Your Name" class="sign3"><br>
+                <input type="text" placeholder="Enter Your Username" class="sign3"><br>
+                <input type="text" placeholder="Enter Your Email Id" class="sign3"><br>
+                <input type="text" placeholder="Enter Your Mobile Number" class="sign3"><br>
+                <button id="submit">Submit Now</button>
+               </div> <!--dont remove it-->
+            </div>
+        </div>
+
+        <div id="person">
+            <img src="person.png" alt="" height="410px">
+            <div id="strip">
+                <!-- <img src="strip.png" alt="" width="420px"> -->
+                <h1 id="font1">WIN</h1>
+                <h1 id="font2"><strong>BIG</strong></h1>
+                <h1 id="font3"><strong>WHY PAY RETAILS PRICES?</strong></h1>
+                <h1 id="font4">Up to 89% Discounts Guarantee!</h1>
+            </div>
+        </div>
+    </header>
+    <div id="font5"><h2>India's No#1 Discount Auction Bidding Platform</h2></div>
+    <div id="font6a"><h6>100% RISKFREE ONLINE AUCTIONS, WIN or BUY BRANDED NEW PRODUCTS AT UP TO 89% HUGE DISCOUNT</h6></div>
+    <div id="font6b">5 Free Credits On Sign Up, Worldwide Shipping , Latest Gadgets, Click To BID Easy Auctions</div>
+    <div id="font6c">60000+ Members , 15000+ Completed Auctions , Always Fair Auction Guaranteed</div>
+    <div class="join"><a href="s1.html">Join Now</a></div>
+    <div id="font7">
+        <h5>✔ Only Brand New Products <br> ✔ No Auction Reserve Price <br> ✔ Free of Charge Returns <br> ✔ User-Friendly Auctioning-Bidding Platform <br> ✔ 100% Secured Online Auction Market</h5>
+    </div>
+    <div id="font7img">
+        <img src="orange-line.png" alt="Not Found" width="280px">
+    </div> 
+    <div id="font7img2">
+        <img src="auction.jpeg" alt="Not found" width="39%">
+    </div>
+    <div id="phone2">
+        <img src="phone2.png" alt="Not found" width="100%">
+    </div>
+    <div id="phone1">
+        <img src="smartphone.png" alt="Not Found" width="70%">
+    </div>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    <div id="box1f"><h6><strong>BID ON</strong></h6></div>
+    <div id="box2fa">Warehouse Products</div>
+    <div id="box2fb">Warehouse Closeouts</div>
+    <div id="box3fa">Overstock Surplus</div>
+    <div id="box3fb">Wholesale Stock</div>
+    <div id="box4fa">Manufacturer Stock</div>
+    <div id="box4fb">And More</div>
+    <div class="img1"><img src="greentick.png" alt="" width="40px"></div>
+    <div class="img2"><img src="greentick.png" alt="" width="40px"></div>
+    <div class="img3"><img src="greentick.png" alt="" width="40px"></div>
+    <div class="img4"><img src="greentick.png" alt="" width="40px"></div>
+    <div class="img5"><img src="greentick.png" alt="" width="40px"></div>
+    <div class="img6"><img src="greentick.png" alt="" width="40px"></div>
+    <div class="auction">Live Auctions</div>
+    <div id="line1"><img src="auctionline.png" alt="Not found" width="10%"></div>
+    <div id="line2"><img src="auctionline.png" alt="Not found" width="10%"></div>
+    <div id="box5a"></div>
+    <div id="box5b"></div>
+    <div id="box5af1" class="F1">OnePlus Nord CE 3 Lite 5G GB</div>
+    <div id="box5af2" class="F1">RAM, 128GB</div>
+    <div id="box5bf1">MRP : 19999.00</div>
+    <div id="box5bi"><img src="oneplus.png" alt="" width="20%"></div>
+    <dic id="box5bf2"><strong>Auction ID. BB35107</strong></dic>
+    <dic id="box5bf3"><strong>12 X</strong></dic>
+    <div id="box5bii"><img src="greentick2.png" alt="" width="3%"></div>
+    <div id="box5bbtn1"><a href="https://amzn.eu/d/2ZW9YJI" target="_blank">BID NOW</a></div>
+    <div id="box5bbtn2">A</div>
+    <div id="box5bbtn3"><img src="shop1.png" alt="" width="2%"></div>
+    <div id="line3"><img src="line1.png" alt="" width="31%"></div>
+    <div id="box6">Last Bid at <nbsp> ₹ 23,000 </div>
+</body>
+
+</html>
